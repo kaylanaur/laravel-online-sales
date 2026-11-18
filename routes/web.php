@@ -42,7 +42,7 @@ Route::middleware(['auth', 'role:customer'])->group(function () {
 Route::get('/', [ProductCatalogController::class, 'index'])->name('shop.index');
 Route::get('/produk/{product:slug}', [ProductCatalogController::class, 'show'])->name('shop.show');
 
-// ---------- Area Admin (M2, M3, dll) ----------
+
 // ---------- Area Admin (M2, M3, M7) ----------
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin'])->group(function () {
     // M7 - Dashboard Admin (menggantikan placeholder M1)
